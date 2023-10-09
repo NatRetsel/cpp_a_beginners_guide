@@ -1,6 +1,6 @@
 # Module 9 Mastery Check
 
-1. What is a copy constructor and when si ti called? Show the general form of a copy constructor.
+1. What is a copy constructor and when is it called? Show the general form of a copy constructor.
    - A copy constructor is a constructor used to make a copy of an object outside of regular assignment operator and only during initialization as a copy
    - General form `classname (const classname &obj){ //body}`. Used in `MyClass x = y`, `x is a copy of y`. However if `MyClass x; MyClass y; x=y` will not invoke copy constructor.
   
