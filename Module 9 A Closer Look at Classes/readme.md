@@ -7,7 +7,7 @@
 2. Explain what happens when an object is returned by a function. Specifically, when is its destructor called?
    - When an object is returned by a function, a temporary object is automatically created, holding the return value. After the value is returned, the object is destroyed.
   
-3. Given this calss:
+3. Given this class:
    ```
    class T {
       int i, j;
@@ -28,7 +28,7 @@
    };
    ```
 4. What is a structure? What is a union?
-   - A structure is another way to define a class in c++. Only that its instance variables and functions are defaulted to be public. A union is a class in whihc all data members share the same memory, members are public by default.
+   - A structure is another way to define a class in c++. Members are defaulted to be public. A union is a class in which all data members share the same memory, members are public by default.
   
 5. Inside a member functions, to what does *this refer?
    - *this refer to the current object that is invoking the member function.
@@ -39,7 +39,7 @@
 7. Show the general form used for overloading a binary member operator function.
    - In the protoype: `return_type operator (*) (parameter list);`. In the definition: `return_type classname::operator (*) (parameter list){}`.
   
-8. To allow operationss involving a class type and a built-in type, what must you do?
+8. To allow operations involving a class type and a built-in type, what must you do?
    - Two friend operator functions, one with class type as the first parameter, and one with the built-in type as the first parameter and one with the class type as the first parameter.
   
 9. Can the ? be overloaded? Can you change the precedence of an operator?
