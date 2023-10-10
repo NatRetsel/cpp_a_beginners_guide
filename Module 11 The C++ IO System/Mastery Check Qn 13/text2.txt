@@ -1,0 +1,7 @@
+/*
+    WRITE a program that merges two text files. Have the user specify the names of the two files on the command line in the order they should
+    appear in the output file. Also, have the user specify the name of the output file. Thus, is the program is called merge, then the
+    following command line will merge files MyFile1.txt annd MyFile2.txt into Target.txt:
+
+    merge MyFile1.txt MyFile2.txt Target.txt
+*/

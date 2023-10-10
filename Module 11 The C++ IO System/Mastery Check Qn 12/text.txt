@@ -1,0 +1,48 @@
+/*
+    Write a program that copies a file. Allow the user to specify the names of the input an output files on the command line.
+    Make sure that your program can copy both text and binary files.
+*/
+#include <iostream>
+#include <fstream>
+#include <cstring>
+
+int main(int argc, char *argv[]) {
+    char ch;
+
+    if (argc!=3) {
+        std::cout << "Usage: <filename1> <filename2> <mode: binary / text>" << std::endl;
+        return 1; 
+    }
+
+    std::ifstream in;
+    if (stricmp(argv[3], "binary") == 0) {
+        std::ifstream in (argv[1], std::ios::in | std::ios::binary);
+
+    }else{
+        std::ifstream in (argv[1], std::ios::in);
+    }
+
+    if (!in) {
+        std::cout << "Cannot open file." << std::endl;
+        return 1;
+    }
+
+    std::ofstream out(argv[2]);
+    if (!out) {
+        std::cout << "Cannot open file to write on." << std::endl;
+        return 1;
+    }
+
+    do {
+        in.get(ch);
+        if(!in.eof()){
+            out.put(ch);
+        }
+    }while (!in.eof());
+
+    in.close();
+    out.close();
+
+    return 0;
+
+}
